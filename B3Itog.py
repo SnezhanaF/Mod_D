@@ -13,7 +13,7 @@ def correct_func(name_arg=None):
    if name_arg is None:
        name_arg = []
    print("Аргумент до изменения", name_arg)
-   name_arg.append(1)
+   name_arg.append(2)
    print("Аргумент после изменения", name_arg)
 
 # вызовем два раза одну и ту же функцию

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Snezha IT\pythonProject\D1.6\venv"
+VIRTUAL_ENV="C:\Users\snepl\projects\Skillfactory\D1.6\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

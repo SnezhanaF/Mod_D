@@ -1,4 +1,5 @@
 .idea/
-Bot.py/
-config.py/
-extension.py/
+Bot.py
+config.py
+extension.py
+main.py

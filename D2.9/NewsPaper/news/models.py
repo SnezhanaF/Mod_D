@@ -16,11 +16,7 @@ class Author(models.Model):
         sum_com_rat = 0
         sum_com_rat += com_rat.get('commentRating')
 
-        com_post_rat = self.comment_post.comment_set.aggregate(commentpostRating=Sum('rating_comment'))
-        sum_com_post_rat = 0
-        sum_com_post_rat += com_post_rat.get('commentpostRating')
-
-        self.rating_author = sum_post_rat * 3 + sum_com_rat + sum_com_post_rat
+        self.rating_author = sum_post_rat * 3 + sum_com_rat
         self.save()
 
 class Category(models.Model):
@@ -33,10 +29,10 @@ class Post(models.Model):
     datetime_post = models.DateTimeField(auto_now_add=True)
     rating_post = models.FloatField(default=0.00)
     CHOICES = (
-        ('PO', 'Post'),
-        ('NE', 'New'),
+        ('AR', 'Статья'),
+        ('NE', 'Новость'),
     )
-    type_information = models.CharField(max_length=2, choices=CHOICES)
+    type_information = models.CharField(max_length=2, choices=CHOICES, default='AR')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category, through='PostCategory')
 

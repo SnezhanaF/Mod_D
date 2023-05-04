@@ -5,3 +5,4 @@ config.py
 extension.py
 main.py
 /command_list.txt
+**venv/
